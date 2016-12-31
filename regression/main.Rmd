@@ -6,7 +6,7 @@ output: html_document
 css: styles.css
 ---
 
-Required to make the visualization below.  
+Required to make the visualization below.  Files available at [GitHub here](https://github.com/jalapic/D3jsR/tree/master/regression).
 
 1. The data converted into JSON format from an R object done in an `r` chunk.
 2. HTML with `divs` in RMarkdown document defining where to put elements of the visualization.
