@@ -1,0 +1,42 @@
+---
+title: "Interactivity in RMarkdown with D3.js"
+author: "James Curley"
+date: "December 30, 2016"
+output: html_document
+css: styles.css
+---
+
+Required to make the visualization below.  
+
+1. The data converted into JSON format from an R object done in an `r` chunk.
+2. HTML with `divs` in RMarkdown document defining where to put elements of the visualization.
+3. a `styles.css` sheet in the working directory linked to through `css: styles.css` in the YAML
+4. link to D3.js library in `script` tag
+5. link to the js file `jsviz.js` in the working directory containing the script to run the visualization in `script` tag.
+ 
+----
+
+
+```{r,  results="asis", message=FALSE, warning=FALSE, echo=FALSE}
+library(jsonlite)
+cat(
+  paste(
+  '<script>
+    var data = ',toJSON(iris[c(5,1,2)]),';
+  </script>'
+  , sep="")
+)
+```
+
+
+
+
+<!--html_preserve-->
+  <div><select id="selector"></select></div>
+			<div class="equation"></div>
+		<div class="equation"></div>
+		<div class="chart"></div>
+<!--/html_preserve-->
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="vizjs.js"></script>

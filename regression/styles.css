@@ -1,0 +1,40 @@
+     body {
+		  margin: 0 auto;
+		  margin-top: 1em;  
+      display: table;
+			font-family: "Helvetica Neue", sans-serif;
+		}
+  
+     svg {    
+       padding-bottom: 16px;
+       height: 525px; /** don't include this usually - needs must  **/ 
+    }
+  
+		.regression {
+		  stroke-width: 2px;
+		  stroke: red;
+		  stroke-dasharray: 10,5;
+		}
+		
+		.equation {
+			font-size: 12px;
+			margin-top: 15px;
+			text-align: center;
+		
+		}
+  
+    .axistext {
+			font-size: 14px;
+		
+		}
+
+     #selector {
+			margin-left: 50px;
+		}
+
+   blockquote {
+  font-size: 14px; 
+  color:navy;
+  background-color:#EEEEEE;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New
+}
