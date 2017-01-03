@@ -127,15 +127,8 @@ data = JSON.parse(JSON.stringify(data).split('"' + colnames[2]+'":').join('"y":'
       var ySeries = data.map(function(e) { return e.y; });  // minimum of all y
       var rsq = leastSquares(xSeries,ySeries);   // do lin.reg. calculations
   
-      
-      // First Equation - slope
-//      		document.getElementsByClassName("equation")[0].innerHTML = "y = " + round(rsq[0] ,2) + "x + " + round(rsq[1] ,2);
-	
-      
-      // Second Equation - R2
-//      document.getElementsByClassName("equation")[1].innerHTML = "R<sup>2</sup> = " + round(rsq[2],2);
+   
 
-      
      // Add trendline
       ptAx =  d3.min(xSeries);
       ptAy =  rsq[0] *  d3.min(xSeries) + rsq[1];
@@ -176,13 +169,8 @@ selector.on("change", function(){
       var rsq1 = leastSquares(xSeries1,ySeries1);
       
 
-        // First Equation - slope
-   //   		document.getElementsByClassName("equation")[0].innerHTML = "y = " + round(rsq1[0] ,2) + "x + " + round(rsq1[1] ,2);
-	
-      
-      // Second Equation - R2
- //     document.getElementsByClassName("equation")[1].innerHTML = "R<sup>2</sup> = " + round(rsq1[2],2);
 
+	     
       
      // Add trendline
       ptAx1 =  d3.min(xSeries1);
@@ -204,14 +192,8 @@ selector.on("change", function(){
 // re-add equations + trendline if ALL re-selected:
   if(value==="ALL") {
 
-        
-      // First Equation - slope
-   //   		document.getElementsByClassName("equation")[0].innerHTML = "y = " + round(rsq[0] ,2) + "x + " + round(rsq[1] ,2);
-	
-      
-      // Second Equation - R2
-    //  document.getElementsByClassName("equation")[1].innerHTML = "R<sup>2</sup> = " + round(rsq[2],2);
-    
+  
+	  
        svg.append("line")
 	        .attr("class", "regression")
 	        .attr("x1", x(ptAx))
